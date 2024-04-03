@@ -42,7 +42,7 @@ import subprocess
 import argparse
 
 
-defaultkey='testgpg@ziogianni.com'
+defaultkey='testgpg@example.com'
 
 def getOptions(args=sys.argv[1:]):
     parser=argparse.ArgumentParser(description='This simple program will help you to write an encrypted monitor about a server status. The resulting string is printed on stdout and can be sent via mqtt or smtp, etc..',epilog='Example of use:')
@@ -68,7 +68,7 @@ for c in commands:
 
 
 
-#recipient_key=['testgpg@ziogianni.com']
+
 recipient_key=[enc_key]
 path= os.getcwd()
 gpg=gnupg.GPG(gnupghome=path+'/.gnupg')
