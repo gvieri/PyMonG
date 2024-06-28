@@ -48,7 +48,7 @@ def getOptions(args=sys.argv[1:]):
     parser=argparse.ArgumentParser(description='This simple program will help you to write an encrypted monitor about a server status. The resulting string is printed on stdout and can be sent via mqtt or smtp, etc..',epilog='Example of use:')
     parser.add_argument('-v','--verbose', help='more verbose output', action='store_true')
     parser.add_argument('-a','--archive', help='archive report in files in ~./repo_path ', action='store_true')
-    parser.add_argument('-k','--key', help='choose gpg key to use', default=defaultkey, action='store_true')
+    parser.add_argument('-k','--key', help='choose gpg key to use', default=defaultkey, action='store')
     opt=parser.parse_args(args)
     return(opt)
 
